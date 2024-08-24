@@ -36,9 +36,6 @@ return {
           show_hidden = true,
         },
       }
-
-      -- Toggle Oil file browser
-      vim.keymap.set('n', '<leader>e', oil.toggle_float, { desc = 'Toggle Oil File Browser' })
     end,
   },
 }

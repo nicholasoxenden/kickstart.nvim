@@ -5,14 +5,14 @@ vim.opt.rnu = true
 -- Disable showing the mode below the statusline
 vim.opt.showmode = false
 
--- Set tabs to 2 spaces
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
+-- Set tabs to 4 spaces
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
 -- Enable auto indenting and set it to spaces
 vim.opt.smartindent = true
-vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 4
 
 -- Enable smart indenting (see https://stackoverflow.com/questions/1204149/smart-wrap-in-vim)
 vim.opt.breakindent = true
@@ -70,12 +70,20 @@ vim.opt.foldcolumn = '0'
 vim.opt.foldnestmax = 5
 vim.opt.foldtext = ''
 
--- Always keep 8 lines above/below cursor unless at start/end of file
-vim.opt.scrolloff = 8
+-- Minimal number of screen lines to keep above and below the cursor.
+vim.opt.scrolloff = 10
 
 -- Place a column line
 -- vim.opt.colorcolumn = "80"
 
+-- Sets how neovim will display certain whitespace characters in the editor.
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+-- Preview substitutions live, as you type!
+vim.opt.inccommand = 'split'
+
+-- Cursor things
 vim.opt.guicursor = {
   'n-v-c:block', -- Normal, visual, command-line: block cursor
   'i-ci-ve:ver25', -- Insert, command-line insert, visual-exclude: vertical bar cursor with 25% width
@@ -84,4 +92,3 @@ vim.opt.guicursor = {
   'a:blinkwait700-blinkoff400-blinkon250', -- All modes: blinking settings
   'sm:block-blinkwait175-blinkoff150-blinkon175', -- Showmatch: block cursor with specific blinking settings
 }
-
