@@ -1,5 +1,18 @@
 return {
   {
+    -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
+    -- used for completion, annotations and signatures of Neovim apis
+    'folke/lazydev.nvim',
+    ft = 'lua',
+    opts = {
+      library = {
+        -- Load luvit types when the `vim.uv` word is found
+        { path = 'luvit-meta/library', words = { 'vim%.uv' } },
+      },
+    },
+  },
+  { 'Bilal2453/luvit-meta', lazy = true },
+  {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -165,6 +178,9 @@ return {
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
+        jsonls = {},
+        sqlls = {},
+        yamlls = {},
         eslint = {
           settings = {
             format = false,
@@ -247,7 +263,6 @@ return {
         lua = { 'stylua' },
         go = { 'goimports', 'gofmt' },
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- Else both formatters run sequentially
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
       },
     },

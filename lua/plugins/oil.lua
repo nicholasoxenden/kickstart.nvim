@@ -1,9 +1,9 @@
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'oil',
-  callback = function()
-    vim.opt_local.colorcolumn = ''
-  end,
-})
+-- vim.api.nvim_create_autocmd('FileType', {
+--   pattern = 'oil',
+--   callback = function()
+--     vim.opt_local.colorcolumn = ''
+--   end,
+-- })
 
 return {
   {
@@ -14,6 +14,7 @@ return {
       local oil = require 'oil'
 
       oil.setup {
+        default_file_explorer = false,
         use_default_keymaps = false,
         keymaps = {
           ['g?'] = 'actions.show_help',
