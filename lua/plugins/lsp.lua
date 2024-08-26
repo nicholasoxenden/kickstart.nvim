@@ -178,6 +178,10 @@ return {
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
+        dockerls = {},
+        bashls = {
+          filetypes = { 'sh', 'zsh' },
+        },
         jsonls = {},
         sqlls = {},
         yamlls = {},
