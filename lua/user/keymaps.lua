@@ -4,9 +4,17 @@ local inoremap = require('user.keymap_utils').inoremap
 local tnoremap = require('user.keymap_utils').tnoremap
 local xnoremap = require('user.keymap_utils').xnoremap
 
--- Normal --
 -- Disable Space bar since it'll be used as the leader key
 nnoremap('<space>', '<nop>')
+
+-- Execute current file (good for lua)
+nnoremap('<leader>X', function()
+  vim.cmd 'w'
+  vim.cmd 'source %'
+end, { desc = 'Execute current file' })
+
+-- Create new tab
+nnoremap('<leader>T', '<cmd>tabnew<cr>', { desc = 'Create new tab' })
 
 -- Window navigation
 nnoremap('<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
@@ -144,11 +152,9 @@ nnoremap('<leader>so', ':SymbolsOutline<cr>')
 nnoremap('zR', require('ufo').openAllFolds)
 nnoremap('zM', require('ufo').closeAllFolds)
 
--- Insert --
 -- Map jj to <esc>
 inoremap('jj', '<esc>')
 
--- Visual --
 -- Disable Space bar since it'll be used as the leader key
 vnoremap('<space>', '<nop>')
 
