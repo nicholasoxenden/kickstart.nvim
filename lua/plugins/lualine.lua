@@ -20,6 +20,21 @@ return {
             { 'filename', path = 1 },
           },
           lualine_x = {
+            -- add pomo
+            function()
+              local ok, pomo = pcall(require, 'pomo')
+              if not ok then
+                return ''
+              end
+
+              local timer = pomo.get_first_to_finish()
+              if timer == nil then
+                return '󰄉  not set'
+              end
+
+              return '󰄉 ' .. tostring(timer)
+            end,
+            'encoding',
             'filetype',
           },
         },
