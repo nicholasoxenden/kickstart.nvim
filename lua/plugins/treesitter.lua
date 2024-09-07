@@ -1,7 +1,6 @@
 return { -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
-    'nvim-treesitter/nvim-treesitter-context',
     'nvim-treesitter/nvim-treesitter-textobjects',
   },
   build = ':TSUpdate',
@@ -19,9 +18,6 @@ return { -- Highlight, edit, and navigate code
     indent = {
       enable = true,
       disable = { 'ruby' },
-    },
-    context = {
-      enable = true,
     },
     textobjects = {
       select = {

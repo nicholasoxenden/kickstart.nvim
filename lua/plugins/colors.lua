@@ -44,6 +44,7 @@ return {
           gitsigns = true,
           nvimtree = true,
           treesitter = true,
+          diffview = true,
           mini = {
             enabled = true,
             indentscope_color = '',
