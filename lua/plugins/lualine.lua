@@ -20,6 +20,12 @@ return {
             { 'filename', path = 1 },
           },
           lualine_x = {
+            {
+              -- show recording in statusline
+              require('noice').api.statusline.mode.get,
+              cond = require('noice').api.statusline.mode.has,
+              color = { fg = '#ff9e64' },
+            },
             -- add pomo
             function()
               local ok, pomo = pcall(require, 'pomo')

@@ -199,3 +199,6 @@ nnoremap('<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
 nnoremap('<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+
+nnoremap('<leader>go', '<cmd>DiffviewOpen<cr>', { desc = '[D]iffview [O]pen' })
+nnoremap('<leader>gc', '<cmd>DiffviewClose<cr>', { desc = '[D]iffview [C]lose' })

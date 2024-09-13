@@ -1,4 +1,6 @@
 return {
   'sindrets/diffview.nvim',
-  opts = {},
+  opts = {
+    enhanced_diff_hl = true,
+  },
 }
