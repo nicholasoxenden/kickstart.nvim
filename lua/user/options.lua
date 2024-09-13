@@ -42,6 +42,10 @@ vim.opt.smartcase = true
 -- Decrease updatetime to 250ms
 vim.opt.updatetime = 250
 
+-- Decrease mapped sequence wait time
+-- Displays which-key popup sooner
+vim.opt.timeoutlen = 300
+
 -- Set completeopt to have a better completion experience
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 

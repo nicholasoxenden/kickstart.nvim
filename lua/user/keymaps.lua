@@ -109,8 +109,6 @@ nnoremap('[w', function()
   vim.api.nvim_feedkeys('zz', 'n', false)
 end)
 
--- Moonlander diagnostic movements --
-
 -- Open the diagnostic under the cursor in a float window
 nnoremap('<leader>d', function()
   vim.diagnostic.open_float {
