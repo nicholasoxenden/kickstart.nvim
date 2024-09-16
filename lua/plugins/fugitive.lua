@@ -1,4 +1,5 @@
 return {
   'tpope/vim-fugitive',
-  opts = {},
+  -- needs to be config, not opts
+  config = function() end,
 }
