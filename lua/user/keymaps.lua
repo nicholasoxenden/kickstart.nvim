@@ -200,3 +200,8 @@ nnoremap('<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]ui
 
 nnoremap('<leader>go', '<cmd>DiffviewOpen<cr>', { desc = '[D]iffview [O]pen' })
 nnoremap('<leader>gc', '<cmd>DiffviewClose<cr>', { desc = '[D]iffview [C]lose' })
+
+-- Git things
+nnoremap('<leader>gb', '<cmd>G blame<cr>', { desc = '[G]it [B]lame' })
+nnoremap('<leader>gs', '<cmd>vert Git<cr>', { desc = '[G]it Vertical [S]plit' })
+nnoremap('<leader>gd', vim.cmd.Gdiffsplit, { desc = '[G]it [D]iff file' })
