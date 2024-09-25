@@ -8,3 +8,4 @@
 - :vnew to open new buffer in vert split
 - <ctrl> + n|p to go to next or prev in telescope window
 - leader + h to do gitsigns things
+- <tmux prefix> + <|> to move current window to left/right

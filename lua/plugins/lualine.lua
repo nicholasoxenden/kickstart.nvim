@@ -17,7 +17,7 @@ return {
             'diagnostics',
           },
           lualine_c = {
-            { 'filename', path = 1 },
+            { 'filename', path = 3 },
           },
           lualine_x = {
             -- add pomo
