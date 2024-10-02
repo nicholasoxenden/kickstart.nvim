@@ -200,6 +200,7 @@ nnoremap('<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]ui
 
 nnoremap('<leader>go', '<cmd>DiffviewOpen<cr>', { desc = '[D]iffview [O]pen' })
 nnoremap('<leader>gc', '<cmd>DiffviewClose<cr>', { desc = '[D]iffview [C]lose' })
+nnoremap('<leader>gf', '<cmd>DiffviewFileHistory %<cr>', { desc = '[D]iffview [F]ile history' })
 
 -- Git things
 nnoremap('<leader>gb', '<cmd>G blame<cr>', { desc = '[G]it [B]lame' })
