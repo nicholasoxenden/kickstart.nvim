@@ -18,7 +18,7 @@ return { -- Highlight, edit, and navigate code
     },
     indent = {
       enable = true,
-      disable = { 'ruby', 'javascript' },
+      disable = { 'ruby', 'javascript', 'jsx' },
     },
     textobjects = {
       select = {
