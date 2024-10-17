@@ -29,6 +29,7 @@ return {
       'hrsh7th/cmp-nvim-lsp',
     },
     config = function()
+      local nvim_lsp = require 'lspconfig'
       -- Brief aside: **What is LSP?**
       --
       -- LSP is an initialism you've probably heard, but might not understand what it is.
@@ -175,6 +176,9 @@ return {
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
         --
+        denols = {
+          root_dir = nvim_lsp.util.root_pattern('deno.json', 'deno.jsonc'),
+        },
         terraformls = {},
         rust_analyzer = {},
         dockerls = {},
@@ -186,6 +190,8 @@ return {
         yamlls = {},
         eslint = {},
         ts_ls = {
+          root_dir = nvim_lsp.util.root_pattern 'package.json',
+          single_file_support = false,
           settings = {
             format = false,
           },
